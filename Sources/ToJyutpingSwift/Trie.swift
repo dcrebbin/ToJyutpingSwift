@@ -129,6 +129,13 @@ private func loadTrieData(into root: TrieNode) {
 
 /// Finds the data file URL
 private func findDataFile() -> URL? {
+    // First: check Bundle.module for SPM resource bundle
+    #if SWIFT_PACKAGE
+    if let url = Bundle.module.url(forResource: "data", withExtension: "txt") {
+        return url
+    }
+    #endif
+    
     // Fallback: check relative to source file location (for development)
     let fileManager = FileManager.default
     let sourceFile = #file

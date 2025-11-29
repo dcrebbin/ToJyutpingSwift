@@ -10,11 +10,9 @@ import Testing
 }
 
 @Test func testGetJyutping() async throws {
-    let result = getJyutping("你好")
-    print("getJyutping(\"你好\"): \(result)")
-    // Should contain parentheses with jyutping
-//    #expect(result.contains("("))
-//    #expect(result.contains(")"))
+    let result = getJyutping("哥哥")
+    print("getJyutping(\"哥哥\") Should be go4 go1: \(result)")
+    #expect(result ==  "哥(go4)哥(go1)")
 }
 
 @Test func testGetJyutpingText() async throws {
