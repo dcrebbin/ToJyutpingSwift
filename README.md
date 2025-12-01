@@ -6,7 +6,7 @@ Derived from [to-jyutping (TypeScript)](https://github.com/CanCLID/to-jyutping) 
 
 ## Usage
 
-1. In XCode, rigth click Package Dependencies and select "Add Package Dependencies"
+1. In Xcode, right click Package Dependencies and select "Add Package Dependencies"
 
 2. Enter the package URL: `https://github.com/dcrebbin/ToJyutpingSwift`
 
